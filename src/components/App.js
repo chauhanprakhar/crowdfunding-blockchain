@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Navbar from './Navbar'
+// import Navbar from './Navbar'
 import Web3 from 'web3';
 import CrowdFunding from '../abis/CrowdFunding.json'
 import './App.css'
@@ -34,7 +34,7 @@ class App extends Component {
 
     const networkData = CrowdFunding.networks[networkId]
     if(networkData){
-      
+
     }
 
   }
@@ -51,7 +51,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar account={this.state.account} />
+        {/* <Navbar account={this.state.account} /> */}
         <div className="container-fluid mt-5">
           <div className="row">
             <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '600px' }}>
