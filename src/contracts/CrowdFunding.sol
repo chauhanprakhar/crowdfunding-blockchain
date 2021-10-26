@@ -8,6 +8,7 @@ contract CrowdFunding{
     uint public minimumContributions;
     uint public raisedAmount;
     uint public noOfContributors;
+    uint public noOfRequests = 0;
     
     constructor(uint _target,uint _deadline) public {
         admin = msg.sender;
@@ -55,6 +56,7 @@ contract CrowdFunding{
         newRequest.recipient = _recipient;
         newRequest.noOfVoters = 0;
         newRequest.isComplete = false;
+        noOfRequests++;
     }
     
     function voteRequest(uint _requestNo) public {
